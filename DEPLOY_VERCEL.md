@@ -25,7 +25,7 @@ As configurações já estão definidas no `vercel.json`:
 |---|---|
 | Build Command | `vite build` |
 | Install Command | `bun install` |
-| Output Directory | `.output` |
+| Output Directory | `dist/client` |
 | Node Version | 20.x (padrão Vercel) |
 
 ## 3. Domínio personalizado
