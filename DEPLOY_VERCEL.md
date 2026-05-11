@@ -25,7 +25,9 @@ As configurações já estão definidas no `vercel.json`:
 |---|---|
 | Build Command | `vite build` |
 | Install Command | `bun install` |
-| Output Directory | `dist` |
+| Output Directory | `dist/client` (para assets estáticos) |
+| Funções Serverless | `dist/server/index.js` (para SSR) |
+| Rewrites | `/ (.*)` para `/dist/server/index.js` |
 | Node Version | 20.x (padrão Vercel) |
 
 ## 3. Domínio personalizado

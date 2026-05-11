@@ -3,9 +3,14 @@
   "framework": null,
   "buildCommand": "vite build",
   "installCommand": "bun install",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/client",
+  "functions": {
+    "dist/server/index.js": {
+      "runtime": "edge"
+    }
+  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/dist/server/index.js" }
   ],
   "headers": [
     {
