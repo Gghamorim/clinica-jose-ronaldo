@@ -3,9 +3,6 @@
   "framework": null,
   "buildCommand": "vite build && cp -r dist/server dist/client/_server",
   "installCommand": "bun install",
-  "node": {
-    "version": "20.x"
-  },
   "outputDirectory": "dist/client",
   "functions": {
     "_server/index.js": {
