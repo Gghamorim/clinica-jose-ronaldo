@@ -23,11 +23,11 @@ As configurações já estão definidas no `vercel.json`:
 
 | Campo | Valor |
 |---|---|
-| Build Command | `vite build` |
+| Build Command | `vite build && cp -r dist/server dist/client/_server` |
 | Install Command | `bun install` |
 | Output Directory | `dist/client` (para assets estáticos) |
-| Funções Serverless | `dist/server/index.js` (para SSR) |
-| Rewrites | `/ (.*)` para `/dist/server/index.js` |
+| Funções Serverless | `_server/index.js` (Edge Runtime) |
+| Rewrites | `/ (.*)` para `/_server/index.js` |
 | Node Version | 20.x (padrão Vercel) |
 
 ## 3. Domínio personalizado
