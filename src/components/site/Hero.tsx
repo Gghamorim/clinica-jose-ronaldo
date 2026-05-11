@@ -63,6 +63,8 @@ export function Hero() {
               alt="Recepção sofisticada da Clínica Dr. José Ronaldo"
               width={1536}
               height={1024}
+              loading="eager"
+              fetchPriority="high"
               className="w-full h-[560px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
