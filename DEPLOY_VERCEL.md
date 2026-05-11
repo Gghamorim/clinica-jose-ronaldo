@@ -42,5 +42,5 @@ Atualmente o site não usa variáveis de ambiente. Caso adicione integrações n
 
 - O build gera assets otimizados (HTML/CSS/JS minificados, imagens com hash).
 - Caching agressivo de `/assets/*` configurado via `vercel.json`.
-- Rotas SPA tratadas via rewrite para `index.html`.
+- Rotas SPA tratadas via rewrite para `_server/index.js`.
 - Caso queira manter também o deploy automático da Lovable, basta clicar em **Publish** no editor — os dois deploys podem coexistir.
