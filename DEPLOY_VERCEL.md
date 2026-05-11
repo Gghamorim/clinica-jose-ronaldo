@@ -44,3 +44,4 @@ Atualmente o site não usa variáveis de ambiente. Caso adicione integrações n
 - Caching agressivo de `/assets/*` configurado via `vercel.json`.
 - Rotas SPA tratadas via rewrite para `_server/index.js`.
 - Caso queira manter também o deploy automático da Lovable, basta clicar em **Publish** no editor — os dois deploys podem coexistir.
+- **Atenção:** A Vercel limita a conexão de um mesmo repositório Git a no máximo 10 projetos. Se atingir esse limite, crie um novo repositório ou um fork para este projeto.
