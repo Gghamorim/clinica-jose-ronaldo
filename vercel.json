@@ -2,9 +2,18 @@
   "buildCommand": "vite build && cp -r dist/server dist/client/_server",
   "installCommand": "bun install",
   "outputDirectory": "dist/client",
+  "functions": {
+    "dist/client/_server/index.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/((?!assets/).*)",
       "destination": "/_server/index.js"
     }
   ]
