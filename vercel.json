@@ -1,16 +1,13 @@
 {
-  "buildCommand": "vite build && mkdir -p server-entry && cp dist/server/index.js server-entry/index.js",
+  "version": 2,
+  "buildCommand": "bun run build && if not exist api mkdir api && copy /Y dist\\server\\index.js api\\index.js > NUL",
   "installCommand": "bun install",
   "outputDirectory": "dist/client",
-  "functions": {
-    "server-entry/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
+
   "rewrites": [
     {
       "source": "/((?!assets/|favicon.ico|.*\\..*).*)",
-      "destination": "/server-entry/index.js"
+      "destination": "/api/index.js"
     }
   ]
 }
