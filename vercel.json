@@ -1,26 +1,3 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "buildCommand": "vite build && cp -r dist/server dist/client/_server",
-  "installCommand": "bun install",
-  "outputDirectory": "dist/client",
-  "functions": {
-    "_server/index.js": {
-      "runtime": "edge"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/_server/index.js"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    }
-  ]
+  "outputDirectory": ".output"
 }
