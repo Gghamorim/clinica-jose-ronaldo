@@ -1,9 +1,9 @@
 {
-  "buildCommand": "vite build && cp -r dist/server dist/client/_server",
+  "buildCommand": "vite build && mkdir -p api && cp dist/server/index.js api/index.js",
   "installCommand": "bun install",
   "outputDirectory": "dist/client",
   "functions": {
-    "dist/client/_server/index.js": {
+    "api/index.js": {
       "runtime": "nodejs20.x"
     }
   },
@@ -14,7 +14,7 @@
     },
     {
       "source": "/((?!assets/).*)",
-      "destination": "/_server/index.js"
+      "destination": "/api/index.js"
     }
   ]
 }
