@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "bun run build && if not exist api mkdir api && copy /Y dist\\server\\index.js api\\index.js > NUL",
+  "buildCommand": "bun run build && mkdir -p api && cp dist/server/index.js api/index.js",
   "installCommand": "bun install",
   "outputDirectory": "dist/client",
 
